@@ -1,0 +1,39 @@
+<header id="header" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-40 transition-all duration-300">
+  <nav class="flex justify-between items-center px-4 lg:px-8 py-4 max-w-7xl mx-auto">
+    <a href="#" class="flex items-center gap-2 text-xl font-bold text-primary-500">
+      <i class="fas fa-puzzle-piece text-2xl"></i>
+      WhitePuzzle
+    </a>
+    
+    <ul id="navLinks" class="hidden lg:flex items-center gap-8">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    
+    <a href="#contact" class="hidden lg:block bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+      Get Started
+    </a>
+    
+    <button id="mobileMenu" class="lg:hidden flex flex-col gap-1">
+      <span class="w-6 h-0.5 bg-gray-800 transition-all"></span>
+      <span class="w-6 h-0.5 bg-gray-800 transition-all"></span>
+      <span class="w-6 h-0.5 bg-gray-800 transition-all"></span>
+    </button>
+  </nav>
+</header>
+
+<style>
+  .nav-link {
+    @apply text-gray-800 font-medium relative transition-colors duration-300 hover:text-primary-500;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+const stats = [
+  { number: '50+', label: 'Projects Delivered' },
+  { number: '98%', label: 'Client Satisfaction' },
+  { number: '5+', label: 'Years Experience' },
+  { number: '24/7', label: 'Support' }
+];
+
+const techStack = [
+  'fab fa-react',
+  'fab fa-vue',
+  'fab fa-angular',
+  'fab fa-node-js',
+  'fab fa-python',
+  'fab fa-php',
+  'fas fa-database',
+  'fab fa-aws',
+  'fab fa-docker'
+];
+---
+
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Why Choose WhitePuzzle?
+        </h2>
+        <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+          <p>
+            We believe in the power of simplicity and innovation. Our team of experienced developers and consultants work closely with you to understand your unique challenges and deliver solutions that not only meet your requirements but exceed your expectations.
+          </p>
+          <p>
+            With a focus on open-source technologies and agile methodologies, we ensure fast delivery, cost-effectiveness, and scalable solutions that grow with your business.
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex justify-center animate-on-scroll">
+        <div class="grid grid-cols-3 gap-6 max-w-md">
+          {techStack.map((icon, index) => (
+            <div 
+              class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300 flex items-center justify-center text-3xl text-primary-500"
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <i class={icon}></i>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
